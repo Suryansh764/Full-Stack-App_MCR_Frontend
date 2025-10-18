@@ -83,7 +83,7 @@ export default function PostJob() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:4000/api/jobs", {
+      const response = await fetch("https://full-stack-app-mcr-backend.vercel.app/api/jobs", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

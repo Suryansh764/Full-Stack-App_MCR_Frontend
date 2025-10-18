@@ -4,7 +4,7 @@ import JobCard from "./JobCard";
 import { useToast } from "../context/ToastContext";
 
 export default function JobPosting() {
-  const { data, loading, error } = useFetch("http://localhost:4000/api/jobs");
+  const { data, loading, error } = useFetch("https://full-stack-app-mcr-backend.vercel.app/api/jobs");
   const { showToast } = useToast();
   const [jobs, setJobs] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -27,7 +27,7 @@ export default function JobPosting() {
     setDeletingId(jobId);
     
     try {
-      const response = await fetch(`http://localhost:4000/api/jobs/${jobId}`, {
+      const response = await fetch(`https://full-stack-app-mcr-backend.vercel.app/api/jobs/${jobId}`, {
         method: "DELETE",
       });
 
