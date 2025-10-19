@@ -4,7 +4,7 @@ import useFetch from "../useFetch";
 export default function JobDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { data, loading, error } = useFetch(`http://localhost:4000/api/jobs/${id}`);
+  const { data, loading, error } = useFetch(`https://full-stack-app-mcr-backend.vercel.app/api/jobs/${id}`);
   const job = data?.data;
 
   if (loading) {
